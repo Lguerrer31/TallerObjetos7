@@ -189,8 +189,7 @@ public class principal extends javax.swing.JFrame {
     private void cmdIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdIgualActionPerformed
         // TODO add your handling code here:
         
-        txtMostrar.append("La hora N°1 es: " + H.validarhora() + "\n"
-                + "La hora N°2 es: " + H2.validarhora());
+        Helper.mensaje(null, "" + H.compararhoras(H2) + "\n" , "Mensaje", 1);
        
     }//GEN-LAST:event_cmdIgualActionPerformed
 
@@ -231,7 +230,8 @@ public class principal extends javax.swing.JFrame {
     private void cmdValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdValidarActionPerformed
         // TODO add your handling code here:
 
-        Helper.mensaje(null, "" + H.compararhoras(H2), "Mensaje", 1);
+        txtMostrar.append("La hora N°1 es: " + H.validarhora() + "\n"
+                + "La hora N°2 es: " + H2.validarhora() + "\n" );
 
     }//GEN-LAST:event_cmdValidarActionPerformed
 
