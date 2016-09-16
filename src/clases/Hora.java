@@ -52,7 +52,51 @@ public class Hora {
         this.segundos = segundos;
     }
     
+    public String validarhora() {
+        String aux;
+        if ((this.getHora() <= 23) && (this.getMinutos() <= 59) && (this.getSegundos() <= 59)) {
+            aux = "La hora es correcta";
+        } else {
+            aux = "La hora es incorrecta";
+        }
+        return aux;
+    }
+
+    public String mostrarhora() {
+        String a;
+        a = "La hora es: " + this.getHora() + " : " + this.getMinutos() + " : " + this.getSegundos();
+        return a;
+    }
+
     
-    
-    
+    public String horasiuales(Hora h2) {
+        String b;
+        if (this.getHora() == h2.getHora() && this.getMinutos() == h2.getMinutos() && this.getSegundos() == h2.getSegundos()) {
+            b = "Las horas coinciden";
+        } else {
+            b = "Las horas no coinciden";
+          }
+        return b;
+          }
+      
+      
+      public String compararhoras(Hora h2) {
+        String s = null;
+        if (this.getHora() > h2.getHora()) {
+            s = "La primera hora es mayor que la segunda";
+        } else if (this.getHora() == h2.hora && this.getMinutos() > h2.getMinutos()) {
+            s = "La Primera hora es mayor que la segunda";
+        } else if (this.getHora() == h2.hora && this.getMinutos() == h2.minutos && this.getSegundos() > h2.getSegundos()) {
+            s = "La primera hora es mayor que la segunda";
+        } else if (this.getHora() < h2.getHora()) {
+            s = "La primera hora es menor que la segunda";
+        } else if (this.getHora() == h2.hora && this.getMinutos() < h2.getMinutos()) {
+            s = "La primera hora es menor que la segunda";
+        } else if (this.getHora() == h2.hora && this.getMinutos() == h2.hora && this.getSegundos() < h2.getSegundos()) {
+            s = "La primera hora es menor que la segunda";
+        }
+        return s;
+        
+    }
+
 }
