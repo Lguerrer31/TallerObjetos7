@@ -135,12 +135,27 @@ public class principal extends javax.swing.JFrame {
         jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         txtSegundos1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtSegundos1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSegundos1KeyTyped(evt);
+            }
+        });
         jPanel4.add(txtSegundos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 50, -1));
 
         txtHora1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtHora1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHora1KeyTyped(evt);
+            }
+        });
         jPanel4.add(txtHora1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 50, -1));
 
         txtMinuto1.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMinuto1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMinuto1KeyTyped(evt);
+            }
+        });
         jPanel4.add(txtMinuto1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 50, -1));
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 170, 120));
@@ -161,12 +176,27 @@ public class principal extends javax.swing.JFrame {
         jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         txtSegundos.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtSegundos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSegundosKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtSegundos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, 50, -1));
 
         txtHora.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtHora.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtHoraKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 50, -1));
 
         txtMinuto.setFont(new java.awt.Font("Times New Roman", 0, 12)); // NOI18N
+        txtMinuto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMinutoKeyTyped(evt);
+            }
+        });
         jPanel5.add(txtMinuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 50, -1));
 
         jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 170, 120));
@@ -188,9 +218,9 @@ public class principal extends javax.swing.JFrame {
 
     private void cmdIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdIgualActionPerformed
         // TODO add your handling code here:
-        
-        Helper.mensaje(null, "" + H.compararhoras(H2) + "\n" , "Mensaje", 1);
-       
+
+        Helper.mensaje(null, "" + H.compararhoras(H2) + "\n", "Mensaje", 1);
+
     }//GEN-LAST:event_cmdIgualActionPerformed
 
     private void cmdFijarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdFijarActionPerformed
@@ -231,7 +261,7 @@ public class principal extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         txtMostrar.append("La hora N°1 es: " + H.validarhora() + "\n"
-                + "La hora N°2 es: " + H2.validarhora() + "\n" );
+                + "La hora N°2 es: " + H2.validarhora() + "\n");
 
     }//GEN-LAST:event_cmdValidarActionPerformed
 
@@ -242,6 +272,72 @@ public class principal extends javax.swing.JFrame {
                 + "La hora N°2 es: " + H2.mostrarhora() + "\n");
 
     }//GEN-LAST:event_cmdMostrarActionPerformed
+
+    private void txtHoraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHoraKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtHoraKeyTyped
+
+    private void txtMinutoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMinutoKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMinutoKeyTyped
+
+    private void txtSegundosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSegundosKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtSegundosKeyTyped
+
+    private void txtHora1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtHora1KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtHora1KeyTyped
+
+    private void txtMinuto1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMinuto1KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMinuto1KeyTyped
+
+    private void txtSegundos1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSegundos1KeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+
+        if (!Character.isDigit(c)) {
+            getToolkit().beep();
+
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtSegundos1KeyTyped
 
     /**
      * @param args the command line arguments
